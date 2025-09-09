@@ -1,0 +1,183 @@
+[
+    {   
+        "quiz_id": 1,
+        "text": "What is the capital of Canada ?",
+        "option1": "Toronto",
+        "option2": "Ottawa",
+        "option3": "Vancouver",
+        "option4": "Montreal",
+        "correct_option": 2
+    },
+    {   
+        "quiz_id": 1,
+        "text": "Who painted the Mona Lisa ?",
+        "option1": "Vincent van Gogh",
+        "option2": "Pablo Picasso",
+        "option3": "Leonardo da Vinci",
+        "option4": "Michelangelo",
+        "correct_option": 3
+    },
+    {   
+        "quiz_id": 1,
+        "text": "Which country won the 2022 FIFA World Cup ?",
+        "option1": "Germany",
+        "option2": "Nigeria",
+        "option3": "France",
+        "option4": "Argentina",
+        "correct_option": 4
+    },
+    {
+        "quiz_id": 1,
+        "text": "What is the Chemical symbol for water ?",
+        "option1": "H₂O",
+        "option2": "Au",
+        "option3": "Ca",
+        "option4": "O₂",
+        "correct_option": 1
+    },
+    {
+        "quiz_id": 1,
+        "text": "Who was the first man to step on the moon ?",
+        "option1": "Jessica Egbedi",
+        "option2": "Zainab Lawal",
+        "option3": "Neil Armstrong",
+        "option4": "Michael Collins",
+        "correct_option": 3
+    },
+    {
+        "quiz_id": 1,
+        "text": "Which country invented Paper",
+        "option1": "Greece",
+        "option2": "Egypt",
+        "option3": "United Kingdom",
+        "option4": "China",
+        "correct_option": 4
+    },
+    {
+        "quiz_id": 1,
+        "text": "What is the largest mammal on Earth ?",
+        "option1": "Elephant",
+        "option2": "Megalodon",
+        "option3": "Great White Shark",
+        "option4": "Blue Whale",
+        "correct_option": 4
+    },
+    {
+        "quiz_id": 1,
+        "text": "Which ocean is the largest in the world ?",
+        "option1": "Pacific Ocean",
+        "option2": "Atlantic Ocean",
+        "option3": "Arctic Ocean",
+        "option4": "Indian Ocean",
+        "correct_option": 1
+    },
+    {
+        "quiz_id": 1,
+        "text": "Which language has the most native speakers ?",
+        "option1": "English",
+        "option2": "Spanish",
+        "option3": "Hindi",
+        "option4": "Mandarin Chinese",
+        "correct_option": 4
+    },
+    {
+        "quiz_id": 1,
+        "text": "Where is the Sydney Opera House located ?",
+        "option1": "United States of America",
+        "option2": "Australia",
+        "option3": "Germany",
+        "option4": "United Kingdom",
+        "correct_option": 2
+    },
+    {
+        "quiz_id": 2,
+        "text": "Which element has the chemical symbol Fe ?",
+        "option1": "Neon",
+        "option2": "Fermium",
+        "option3": "Fluorine",
+        "option4": "Iron",
+        "correct_option": 4
+    },
+
+    {
+        "quiz_id": 2,
+        "text": "In what year did World War II end ?",
+        "option1": "1945",
+        "option2": "1944",
+        "option3": "1940",
+        "option4": "1947",
+        "correct_option": 1
+    },
+    {
+        "quiz_id": 2,
+        "text": "Which planet has the most moons ?",
+        "option1": "Earth",
+        "option2": "Mars",
+        "option3": "Saturn",
+        "option4": "Jupiter",
+        "correct_option": 3
+    },
+    {
+        "quiz_id": 2,
+        "text": "Who wrote Pride and Prejudice ?",
+        "option1": "Emily Brontë",
+        "option2": "Jane Austen",
+        "option3": "Mary Shelley",
+        "option4": "Charlotte Brontë",
+        "correct_option": 2
+    },
+    {
+        "quiz_id": 2,
+        "text": "What is the smallest prime number ?",
+        "option1": "1",
+        "option2": "4",
+        "option3": "6",
+        "option4": "2",
+        "correct_option": 4
+    },
+    {
+        "quiz_id": 2,
+        "text": "What does DNA stand for ?",
+        "option1": "Deoxyribonuecleic Acid",
+        "option2": "Dinucleic Acid",
+        "option3": "Double Nucleic Acid",
+        "option4": "Deoxyribonucleic Acid",
+        "correct_option": 4
+    },
+    {
+        "quiz_id": 2,
+        "text": "Which blood type is known as the universal donor ?",
+        "option1": "O+",
+        "option2": "O-",
+        "option3": "A+",
+        "option4": "AB+",
+        "correct_option": 2
+    },
+    {
+        "quiz_id": 2,
+        "text": "Which country is the origin of the car brand BMW ?",
+        "option1": "Germany",
+        "option2": "United States of America",
+        "option3": "France",
+        "option4":  "Japan",
+        "correct_option": 1
+    },
+    {
+        "quiz_id": 2,
+        "text": "Which liquid is metal at room temperature",
+        "option1": "Aluminum",
+        "option2": "Iron",
+        "option3": "Mercury",
+        "option4": "Copper",
+        "correct_option": 3
+    },
+    {
+        "quiz_id": 2,
+        "text": "What is the main language spoken in Brazil",
+        "option1": "English",
+        "option2": "Spanish",
+        "option3": "Portugese",
+        "option4": "Chinese",
+        "correct_option": 3
+    }
+]

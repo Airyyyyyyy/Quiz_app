@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container quiz-container">
+    <h1>Available Quizzes .</h1>
+    <div class="list-group">
+        {% for quiz in quizzes %}
+        <a href="{% url 'start_quiz' quiz.id %}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ quiz.title }}</h5>
+                <medium>{{ quiz.question_set.count }} questions</medium>
+            </div>
+            <p class="mb-1">{{ quiz.description }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    body {
+        background: rgba(138, 161, 226, 0.479);
+        min-height: 100vh;
+        padding-top: 0; 
+    }
+
+    .quiz-container {
+        background: rgba(138, 161, 226, 0.479);
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 800px;
+        margin: 40px auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: rgba(5, 26, 82, 0.479);
+        position: relative;
+        padding-bottom: 10px;
+    }
+    .mb-1 {
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+</style>
+{% endblock %}

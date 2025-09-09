@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load quiz_extras %}
+
+{% block content %}
+<style>
+    .results {
+        font-size: 30px;
+    }
+    .answer-block {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border-radius: 8px;
+        background: #f8f9fa;
+        border: 1px solid #e0e0e0;
+    }
+    .correct {
+        color: green;
+        font-weight: bold;
+    }
+    .wrong {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<div class="container results container text-center mt-5">
+    <h2>Quiz Results</h2>
+    <p><strong>Quiz:</strong> {{ quiz.title }}</p>
+    <p><strong>Your Score:</strong> {{ score }} / {{ total_questions }}</p>
+    <p><strong>Percentage:</strong> {{ percentage }}%</p>
+    <a href="{% url 'quiz_list' %}" class="btn btn-primary mt-3">Back to Quizzes</a>
+    <button class="btn btn-secondary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#answersCollapse">
+        Check Results
+    </button>
+    <div class="collapse mt-4" id="answersCollapse">
+        {% for response in responses %}
+            {% with question=questions|get_item:forloop.counter0 %}
+            <div class="answer-block text-start">
+                <strong>Q{{ forloop.counter }}: {{ question.text }}</strong><br>
+                <span>
+                    You picked: 
+                    <strong>
+                        {{ question|get_option:response.selected_option }}
+                    </strong>
+                </span>
+                {% if response.is_correct %}
+                    <span class="correct ms-2">Correct</span>
+                {% else %}
+                    <span class="wrong ms-2">Wrong</span><br>
+                    <span>Correct answer: 
+                        <strong>
+                            {{ question|get_option:question.correct_option }}
+                        </strong>
+                    </span>
+                {% endif %}
+            </div>
+            {% endwith %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

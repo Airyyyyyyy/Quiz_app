@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;   
+        }
+
+         body {
+            background: rgba(138, 161, 226, 0.479);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: rgb(221, 156, 36);;
+            text-shadow: 0 0 15px rgba(104, 90, 11, 0.7);
+            animation: pulse 2s infinite;
+        }
+    
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(177, 107, 107, 0.3);
+            letter-spacing: 1px;
+            background: black;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: rgb(221, 156, 36);
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo floating">
+            <i class="fas fa-brain"></i>
+        </div>
+        
+        <h1>Welcome To Airyy's Quiz App.</h1>
+        
+        <p class="tagline">
+            Test your knowledge, challenge your friends, and climb the leaderboard in our interactive quiz platform !
+        </p>
+        
+        <a href="{% url 'quiz_list' %}" class="btn">
+            <i class=></i> View Quizzes
+        </a>
+    </div>
+    </body>
+</html>

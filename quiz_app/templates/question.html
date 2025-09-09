@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body {
+        background: rgba(138, 161, 226, 0.479);
+    }
+    .white-container {
+        padding: 0px 10px 20px 10px;
+    }
+
+    .big-question {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .big-options label {
+        font-size: 1.5rem;
+    }
+    .button{
+        background-color: rgb(226, 226, 226);
+        margin-top: 30px;
+        font-size: larger;
+        padding: 0px 15px ;
+        color: rgb(43, 36, 36);
+    }
+    .timer {
+        font-size: 2rem;
+        color: #d9534f;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+</style>
+<div class="container white-container">
+    <div id="time-limit" data-limit="{{ time_limit|default:15 }}" style="display: none;"></div>
+    <div class="timer" id="timer"></div>
+    <h2 class="big-question">{{ question.text }}</h2>
+    <form method="post" id="quiz-form">
+        {% csrf_token %}
+        <div class="big-options">
+            {{ form.options }}
+        </div>
+        {% if is_last_question %}
+            <button type="submit" class="button">Submit</button>
+        {% else %}
+            <button type="submit" class="button">Next</button>
+        {% endif %}
+    </form>
+</div>
+
+<script>
+    // Get the time limit from Django context (in seconds)
+    const timeLimitElement = document.getElementById('time-limit');
+    let timeLeft = parseInt(timeLimitElement.dataset.limit) || 15;  // Fallback to 30 if invalid
+    
+    const timerDisplay = document.getElementById('timer');
+    const form = document.getElementById('quiz-form');
+
+    timerDisplay.textContent = "Time left: " + timeLeft + "s";
+
+    // Use setInterval for more efficient timing
+    const timerInterval = setInterval(() => {     
+        timeLeft--;
+        timerDisplay.textContent = "Time left: " + timeLeft + "s";   
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            form.submit(); // Submit form when time runs out
+        }
+        timeLeft--;
+    }, 1000);
+</script>
+{% endblock %}
