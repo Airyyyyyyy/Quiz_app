@@ -56,7 +56,7 @@ def show_question(request):
 
             # Save to database
             UserResponse.objects.create(
-                user=request.user,
+                # user=request.user,
                 question=question,
                 selected_option=selected_option,
                 is_correct=is_correct

@@ -26,7 +26,7 @@ class Option(models.Model):
     is_correct = models.BooleanField(default=False)
 
 class UserResponse(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True, blank=True)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     selected_option = models.IntegerField(default="1")
     timestamp = models.DateTimeField(auto_now_add=True)
