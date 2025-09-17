@@ -6,7 +6,9 @@
         background: rgba(138, 161, 226, 0.479);
     }
     .white-container {
+        background-color: white;
         padding: 0px 10px 20px 10px;
+        margin-top: 15px;
     }
 
     .big-question {
@@ -29,6 +31,29 @@
         font-weight: bold;
         margin-bottom: 20px;
     }
+    @media (max-width: 767px) {
+        .big-question {
+            font-size: 18px;
+        }
+        .big-options label {
+            font-size: 12px;
+        }
+        .button{
+            font-size: 10px;
+        }
+        .timer {
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 575px) {
+        .white-container {
+            width: 95%;
+            padding: 0px 5px 5px 5px;
+        }
+        h2 {
+            font-size: 10px;
+        }
+    }
 </style>
 <div class="container white-container">
     <div id="time-limit" data-limit="{{ time_limit|default:15 }}" style="display: none;"></div>
@@ -50,7 +75,7 @@
 <script>
     // Get the time limit from Django context (in seconds)
     const timeLimitElement = document.getElementById('time-limit');
-    let timeLeft = parseInt(timeLimitElement.dataset.limit) || 15;  // Fallback to 30 if invalid
+    let timeLeft = parseInt(timeLimitElement.dataset.limit) || 15;  
     
     const timerDisplay = document.getElementById('timer');
     const form = document.getElementById('quiz-form');
