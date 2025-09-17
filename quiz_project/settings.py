@@ -25,10 +25,12 @@ SECRET_KEY = 'django-insecure-oqdyd#kii-z9kb8457(jrwl%d1@*4)5=hrvq(+ah7@)+ynfrsj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['.onrender.com']
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['quiz-app-61ts.onrender.com']
+ALLOWED_HOSTS = [
+    'quiz-app-61ts.onrender.com',
+    '.onrender.com', 
+    '127.0.0.1', 
+    'localhost'
+]
 
 # Application definition
 
