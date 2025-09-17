@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['.onrender.com']
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-ALLWED_HOSTS = ['quiz-app-61ts.onrender.com.']
+ALLOWED_HOSTS = ['quiz-app-61ts.onrender.com']
 
 # Application definition
 
